@@ -17,8 +17,8 @@ app.get('/',function(req,res){
 	res.sendfile('index.html');
 });
 app.get('/send',function(req,res){
-	var mailOptions={
-		from : 'bharanisrinivas91@gmail.com',
+  console.log('req ',req.query);
+	var mailOptions={		
 		to : req.query.to,
 		subject : req.query.subject,
 		text : req.query.text
@@ -28,7 +28,9 @@ app.get('/send',function(req,res){
   if (error) {
     console.log(error);
   } else {
+    
     console.log('Email sent: ' + info.response);
+
   }
 });
 });
