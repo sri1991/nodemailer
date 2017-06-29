@@ -1,6 +1,7 @@
 var express=require('express');
 var nodemailer = require("nodemailer");
 var app=express();
+var port = process.env.PORT||3000
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -37,6 +38,6 @@ app.get('/send',function(req,res){
 
 /*--------------------Routing Over----------------------------*/
 
-app.listen(3000,function(){
-	console.log("Express Started on Port 3000");
+app.listen(port,function(){
+	console.log("Express Started on Port "+port);
 });
