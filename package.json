@@ -1,6 +1,9 @@
 {
   "name": "email-node",
   "version": "1.0.0",
+  "scripts": {
+    "start": "node Server.js"
+  },
   "dependencies": {
     "nodemailer": "latest",
     "express": "latest"
